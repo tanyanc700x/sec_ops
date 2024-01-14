@@ -7,3 +7,6 @@ print(outside_input // 1000)
 print((outside_input % 1000) // 100)
 print((outside_input % 100) // 10)
 print(outside_input % 10)
+
+
+print('Home work done, at a girl!')
