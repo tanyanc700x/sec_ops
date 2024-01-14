@@ -23,3 +23,16 @@ print(hundreds)
 print(tens)
 print(ones)
 
+# outside_input = int(input("Dare to add 4 random digits: "))
+# for x in str(outside_input):
+#     print(x)
+
+
+# outside_input = int(input("Dare to add 4 random digits: "))
+#
+# # Getting a number
+# while outside_input > 0:
+#     digit = outside_input % 10
+#     print(digit)
+#     outside_input //= 10
+
