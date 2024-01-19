@@ -8,7 +8,11 @@ num2 = float(input("Provide your second digit: "))
 # Choosing math operation
 operator = input("Choose operation (+, -, *, /): ")
 
-# Results part:
+# Results part. Corrected.:
+while operator == '/' and num2 == 0:
+    print("Error. You cannot divide by zero")
+    num2 = float(input("Provide a digit that is > 0: "))
+
 if operator == '+':
     result = num1 + num2
 elif operator == '-':
@@ -16,13 +20,7 @@ elif operator == '-':
 elif operator == '*':
     result = num1 * num2
 elif operator == '/':
-    # Okay, I will use If here)) Division by zero check
-    if num2 == 0:
-        print("Error. You cannot divide by zero")
-        num2 = float(input("Provide a digit that is > 0: "))
-        result = num1 / num2
-    else:
-        result = num1 / num2
+    result = num1 / num2
 
 # Print the result
 print("Result:", result)
