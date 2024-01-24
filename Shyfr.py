@@ -6,9 +6,9 @@ result = ""
 
 for any_char in shyfr:
     if any_char in letters:
-        char_place = letters.index(any_char)
-        char_place_2 = (char_place + key) % len(letters)
-        result += letters[char_place_2]
+        old_char = letters.index(any_char)
+        new_char = (old_char + key) % len(letters)   ### OR divmod(old_char + key, len(letters))[1]
+        result += letters[new_char]
     else:
         result += any_char
 
