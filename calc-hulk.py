@@ -5,12 +5,17 @@ num1 = float(input("Provide your first digit: "))
 # Second digit request
 num2 = float(input("Provide your second digit: "))
 
-# Choosing math operation
+# Choosing math operation with input validation
+valid_operators = ['+', '-', '*', '/']
 operator = input("Choose operation (+, -, *, /): ")
 
-# Results part. Corrected.:
+while operator not in valid_operators:
+    print("Invalid operator. Please choose a valid operator.")
+    operator = input("Choose operation (+, -, *, /): ")
+
+# Results part
 while operator == '/' and num2 == 0:
-    print("Error. You cannot divide by zero")
+    print("Error. You cannot divide by zero.")
     num2 = float(input("Provide a digit that is > 0: "))
 
 if operator == '+':
@@ -22,8 +27,8 @@ elif operator == '*':
 elif operator == '/':
     result = num1 / num2
 
-# Print the result
 print("Result:", result)
+
 
 ################################### The same but with loop to start again ###################################################
 # while True:
@@ -138,3 +143,36 @@ print("Result:", result)
 #     print("Error: You cannot divide by zero. Please provide a non-zero second digit.")
 # except ValueError:
 #     print("Error: Please enter valid numerical values.")
+################################## Match case####################################
+
+# # First digit request
+# num1 = float(input("Provide your first digit: "))
+#
+# # Second digit request
+# num2 = float(input("Provide your second digit: "))
+#
+# # Choosing math operation with input validation
+# valid_operators = {'+', '-', '*', '/'}
+# operator = input("Choose operation (+, -, *, /): ")
+#
+# while operator not in valid_operators:
+#     print("Invalid operator. Please choose a valid operator.")
+#     operator = input("Choose operation (+, -, *, /): ")
+#
+# # Results part
+# while operator == '/' and num2 == 0:
+#     print("Error. You cannot divide by zero.")
+#     num2 = float(input("Provide a digit that is > 0: "))
+#
+# # Using match case for operation
+# match operator:
+#     case '+':
+#         result = num1 + num2
+#     case '-':
+#         result = num1 - num2
+#     case '*':
+#         result = num1 * num2
+#     case '/':
+#         result = num1 / num2
+#
+# print("Result:", result)

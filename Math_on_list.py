@@ -1,11 +1,9 @@
-# my_list = [0, 1, 7, 2, 4, 8]
+my_list = [0, 1, 7, 2, 4, 8]
 # my_list = [1, 3, 5]
 # my_list = [6]
 # my_list = [0]
-my_list = []
+# my_list = []
 result = my_list[0::2]
-print(result)
-print(len(result))
 if len(my_list) >= 1:
     math = sum(x for x in result) * my_list[-1]
 else:

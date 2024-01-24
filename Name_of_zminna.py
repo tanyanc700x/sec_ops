@@ -27,8 +27,3 @@ while True:
             print("Variable name is not valid. Please re-enter.")
     except Exception:
         print("An error occurred. Please check your input.")
-
-
-
-
-

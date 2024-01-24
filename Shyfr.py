@@ -18,7 +18,7 @@ shyfr = ("Не зашифровано")
 result = ""
 for any_char in shyfr:
     result+= chr(ord(any_char)+key)
-    print(any_char + "  ->  " + str(ord(any_char)))
+    # print(any_char + "  ->  " + str(ord(any_char)))
 print(result)
 
 shyfr = result

@@ -86,5 +86,10 @@
 # print(f"Final size of list: {final_memory_size} bytes")
 
 
-import this
+start_char = 'а'
+end_char = 'я'
+alphabet = [chr(char_code) for char_code in range(ord(start_char), ord(end_char) + 1)]
+
+print(alphabet)
+
 
