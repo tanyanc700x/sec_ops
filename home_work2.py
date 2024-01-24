@@ -1,4 +1,4 @@
-
+import dn
 # A request to add digits
 outside_input = int(input("Dare to add 4 random digits: "))
 

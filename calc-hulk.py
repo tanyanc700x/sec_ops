@@ -176,3 +176,4 @@ print("Result:", result)
 #         result = num1 / num2
 #
 # print("Result:", result)
+import dns.resolver
