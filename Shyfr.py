@@ -11,7 +11,19 @@ for any_char in shyfr:
         result += letters[new_char]
     else:
         result += any_char
+print(result)
+#########################################  Another one ################################################
 
+shyfr = ("Не зашифровано")
+result = ""
+for any_char in shyfr:
+    result+= chr(ord(any_char)+key)
+    print(any_char + "  ->  " + str(ord(any_char)))
 print(result)
 
+shyfr = result
+result = ""
 
+for any_char in shyfr:
+    result+= chr(ord(any_char)-key)
+print(result)
