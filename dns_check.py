@@ -3,18 +3,13 @@ import dns.resolver
 # Getting a domain from outside
 domain = input("Add your domain name: ")
 
-def get_nameservers(domain):
-    result = dns.resolver.resolve(domain, 'NS')
-    nameservers = [ns.to_text() for ns in result]
-    return nameservers
+def get_dns_records(domain, record_type):
+    result = dns.resolver.resolve(domain, record_type)
+    records = [record.to_text() for record in result]
+    return records
 
-
-def get_a_records(domain):
-    result = dns.resolver.resolve(domain, 'A')
-    a_records = [record.to_text() for record in result]
-    return a_records
-   #Usage
-nameservers = get_nameservers(domain)
+# Usage
+nameservers = get_dns_records(domain, 'NS')
 
 if nameservers:
     print("The nameservers are:")
@@ -23,13 +18,11 @@ if nameservers:
 else:
     print(f"Cannot get nameservers for {domain}.")
 
-a_records = get_a_records(domain)
+a_records = get_dns_records(domain, 'A')
 
 if a_records:
-    print(f"A record:")
+    print(f"A records:")
     for a_record in a_records:
         print(a_record)
 else:
-    print(f"Cannot get A record for {domain}.")
-
-
+    print(f"Cannot get A records for {domain}.")
