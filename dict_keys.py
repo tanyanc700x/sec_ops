@@ -1,26 +1,24 @@
 ######################### Sets 1 ##############################
 
-x = {1: 1, 2: 2, 3: 3, 4: 4}
-y = {2: 22, 3: 33, 5: 55}
+dict1 = {1: 1, 2: 2, 3: 3, 4: 4}
+dict2 = {2: 22, 3: 33, 5: 55}
 merge = {}
 
-z = set(x.keys()).difference(y.keys())
-print(z)
+diff = set(dict1.keys()).difference(dict2.keys())
+print(diff)
 
-common = set(x.keys()).intersection(y.keys())
+common = set(dict1.keys()).intersection(dict2.keys())
 print(common)
 
+newdict = {key: dict1[key] for key in set(dict1.keys()).difference(dict2.keys())}
+print(newdict)
 
-w = {key: x[key] for key in set(x.keys()).difference(y.keys())}
-print(w)
-
-merge = {key: [x[key], y[key]] if key in x and key in y else x[key] if key in x else y[key] for key in
-         set(x.keys()).union(y.keys())}
+merge = {key: [dict1[key], dict2[key]] if key in dict1 and key in dict2 else dict1[key] if key in dict1 else dict2[key] for key in
+         set(dict1.keys()).union(dict2.keys())}
 
 print(merge)
 
-################################ Sets 2##################################################
-
+################################ Sets 2  ##################################################
 
 # dict_1 = {1: 1, 2: 2, 3: 3, 4: 4}
 # dict_2 = {2: 22, 3: 33, 5: 55}
