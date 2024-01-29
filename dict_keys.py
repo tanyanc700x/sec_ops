@@ -14,13 +14,8 @@ print(common)
 w = {key: x[key] for key in set(x.keys()).difference(y.keys())}
 print(w)
 
-for key in set(x.keys()).union(y.keys()):
-    if key in x and key in y:
-        merge[key] = [x[key], y[key]]
-    elif key in x:
-        merge[key] = x[key]
-    elif key in y:
-        merge[key] = y[key]
+merge = {key: [x[key], y[key]] if key in x and key in y else x[key] if key in x else y[key] for key in
+         set(x.keys()).union(y.keys())}
 
 print(merge)
 
