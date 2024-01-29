@@ -15,7 +15,7 @@ print(pairs)
 
 # г) Об'єднати ці два словники у новий словник за правилом
 merged = {key: [dict_1[key], dict_2[key]] if key in dict_2 else dict_1[key] for key in dict_1.keys()}
-print(pairs)
+print(merged)
 
 
 #####################################################################################################################
