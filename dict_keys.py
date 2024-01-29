@@ -7,7 +7,7 @@ print(common)
 
 # б) Створити список із ключів, які є у першому, але немає у другому словнику.
 absent = dict_1.keys() - dict_2.keys()
-print((absent))
+print(absent)
 
 # в) Створити новий словник з пар {ключ:значення} для ключів, які є в першому, але немає в другому словнику.
 pairs = {key: dict_1[key] for key in absent}
@@ -16,6 +16,8 @@ print(pairs)
 # г) Об'єднати ці два словники у новий словник за правилом
 merged = {key: [dict_1[key], dict_2[key]] if key in dict_2 else dict_1[key] for key in dict_1.keys()}
 print(merged)
+print(type(merged))
+
 
 
 #####################################################################################################################
