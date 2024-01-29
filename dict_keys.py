@@ -1,24 +1,34 @@
-######################### Sets 1 ##############################
+x = set({1: 1, 2: 2, 3: 3, 4: 4})
+y = set({2: 22, 3: 33, 5: 55})
 
-dict1 = {1: 1, 2: 2, 3: 3, 4: 4}
-dict2 = {2: 22, 3: 33, 5: 55}
-merge = {}
+z = x.difference(y)
+print(z)
 
-diff = set(dict1.keys()).difference(dict2.keys())
-print(diff)
+x.intersection_update(y)
+print(x)
 
-common = set(dict1.keys()).intersection(dict2.keys())
-print(common)
 
-newdict = {key: dict1[key] for key in set(dict1.keys()).difference(dict2.keys())}
-print(newdict)
+######################### Sets 2 ##############################
 
-merge = {key: [dict1[key], dict2[key]] if key in dict1 and key in dict2 else dict1[key] if key in dict1 else dict2[key] for key in
-         set(dict1.keys()).union(dict2.keys())}
+# dict1 = {1: 1, 2: 2, 3: 3, 4: 4}
+# dict2 = {2: 22, 3: 33, 5: 55}
+# merge = {}
+#
+# diff = set(dict1.keys()).difference(dict2.keys())
+# print(diff)
+#
+# common = set(dict1.keys()).intersection(dict2.keys())
+# print(common)
+#
+# newdict = {key: dict1[key] for key in set(dict1.keys()).difference(dict2.keys())}
+# print(newdict)
+#
+# merge = {key: [dict1[key], dict2[key]] if key in dict1 and key in dict2 else dict1[key] if key in dict1 else dict2[key] for key in
+#          set(dict1.keys()).union(dict2.keys())}
+#
+# print(merge)
 
-print(merge)
-
-################################ Sets 2  ##################################################
+################################ Sets 3  ##################################################
 
 # dict_1 = {1: 1, 2: 2, 3: 3, 4: 4}
 # dict_2 = {2: 22, 3: 33, 5: 55}
