@@ -18,6 +18,7 @@ max_name_length = max(len(person["name"]) for person in people_list)
 longest_names = [person["name"] for person in people_list if len(person["name"]) == max_name_length]
 print("The longest name is:", longest_names)
 
+# An average age
 average_age = sum(person["age"] for person in people_list) / len(people_list)
-average_age_list = [average_age]  # конвертуємо float в список
+average_age_list = [average_age]
 print("The average age is:", average_age_list)
