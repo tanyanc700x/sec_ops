@@ -2,7 +2,7 @@ dict_1 = {1: 1, 2: 2, 3: 3, 4: 4}
 dict_2 = {2: 22, 3: 33, 5: 55}
 
 # а) Створити список із ключів, які є в обох словниках.
-common = dict_1.keys() & dict_2.keys() #Duplicate values will be ignored
+common = dict_1.keys() & dict_2.keys()
 print(common)
 
 # б) Створити список із ключів, які є у першому, але немає у другому словнику.
