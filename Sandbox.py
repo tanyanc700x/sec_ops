@@ -109,13 +109,9 @@
 #         print(ns)
 #
 #
-import dns.resolver
-import dns.resolver
-import dns.resolver
-domain = input("Add your domain name: ")
-nameservers = []
-for ns in result:
-    result = nameservers.append(ns.to_text())
-    print(result)
+thistuple = ("apple", "banana", "cherry")
+y = ("orange",)
+thistuple += y
 
+print(thistuple)
 
