@@ -2,6 +2,7 @@ def find_unique_value(some_list):
     for element in some_list:
         if some_list.count(element) == 1:
             unique_element = element
+            # print(unique_element)
             return unique_element
 
 # Тести
